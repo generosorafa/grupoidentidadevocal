@@ -147,13 +147,21 @@ section{padding:7rem 2rem}
 .agenda-trimestre-titulo{font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(201,168,76,.2);padding-bottom:.8rem;margin-bottom:0}
 .agenda-list{display:flex;flex-direction:column;gap:0}
 .agenda-item{display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:2rem;padding:1.6rem 0;border-bottom:1px solid rgba(201,168,76,.07);transition:all .3s;text-decoration:none;color:inherit}
-.agenda-item:hover{padding-left:1rem}
+.agenda-item:hover{padding-left:.8rem;background:rgba(201,168,76,.03)}
 .agenda-day{font-family:var(--ff-display);font-size:2.3rem;font-weight:300;color:var(--gold);line-height:1;text-align:center}
 .agenda-month{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text-dim);text-align:center}
 .agenda-city{font-size:1.05rem;font-weight:400;color:var(--text);margin-bottom:.2rem}
 .agenda-church{font-size:.8rem;color:var(--text-muted)}
+.agenda-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:.3rem}
 .agenda-time{font-size:.75rem;letter-spacing:.1em;color:var(--gold-dim);white-space:nowrap}
+.agenda-maps{font-size:.65rem;letter-spacing:.1em;color:var(--text-dim);opacity:0;transform:translateX(6px);transition:all .3s;white-space:nowrap}
+.agenda-item:hover .agenda-maps{opacity:1;transform:translateX(0);color:var(--gold)}
 .agenda-empty{color:var(--text-muted);font-style:italic;text-align:center;padding:3rem 0;font-family:var(--ff-display);font-size:1.3rem}
+@media(max-width:600px){
+  .agenda-item{grid-template-columns:70px 1fr auto;gap:1rem;padding:1.3rem 0}
+  .agenda-maps{display:none}
+  .agenda-day{font-size:1.9rem}
+}
 
 /* SONHO */
 #sonho{background:var(--dark2);position:relative;overflow:hidden;text-align:center}
@@ -355,7 +363,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);padding:
       <div class="musica-card reveal">
         <div class="musica-type">Single · 2021</div>
         <div class="musica-title">Quero que seja o meu Deus</div>
-        <div class="musica-year">Primeiro registro fonográfico do grupo</div>
+        <div class="musica-year" style="margin-bottom:1rem">Primeiro registro fonográfico do grupo</div>
+        <iframe style="border-radius:6px;margin-bottom:.5rem" src="https://open.spotify.com/embed/track/1IKJVxfsYCPpxcsTXMAuJN?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="musica-links">
           <a class="musica-link" href="https://open.spotify.com/intl-pt/track/1IKJVxfsYCPpxcsTXMAuJN?si=b5719a3421c84e44" target="_blank">Spotify</a>
           <a class="musica-link" href="https://youtu.be/ezk5KW_SEsE?si=l6aHCpC3fB9sslZq" target="_blank">YouTube</a>
@@ -364,7 +373,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);padding:
       <div class="musica-card reveal">
         <div class="musica-type">Single · 2024</div>
         <div class="musica-title">Pensou em Mim</div>
-        <div class="musica-year">Lançamento mais recente do grupo</div>
+        <div class="musica-year" style="margin-bottom:1rem">Lançamento mais recente do grupo</div>
+        <iframe style="border-radius:6px;margin-bottom:.5rem" src="https://open.spotify.com/embed/track/4CvqRfVmJPhJwlAb0XDkKz?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="musica-links">
           <a class="musica-link" href="https://open.spotify.com/intl-pt/track/4CvqRfVmJPhJwlAb0XDkKz?si=be9fb6ca5d0e4c9c" target="_blank">Spotify</a>
           <a class="musica-link" href="https://youtu.be/ZzrZJZizcWQ?si=K4SSzQi0Rd6xobKs" target="_blank">YouTube</a>
@@ -429,34 +439,34 @@ footer{background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);padding:
       <div class="agenda-trimestre-titulo">2º Trimestre · Abr · Mai · Jun · 2025</div>
       <div class="agenda-list">
 
-        <a href="#" class="agenda-item">
+        <a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwiQoO2MoMuUAxUAAAAAHQAAAAAQCQ..i&sca_esv=987102333fe88aad&pvq=Cg0vZy8xMWNqaHJ2MTR4IgoKBGlhc2QQAhgD&lqi=ChppYXNkIHPDo28gcGF1bG8gcGlyYWNpY2FiYUicifT7wauAgAhaJhAAGAAYARgCGAMiGmlhc2Qgc8OjbyBwYXVsbyBwaXJhY2ljYWJhkgEcc2V2ZW50aF9kYXlfYWR2ZW50aXN0X2NodXJjaA&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=br&sa=X&ftid=0x94c630efb2cdb29b:0x2e640d6d2141913f" target="_blank" class="agenda-item">
           <div><div class="agenda-day">25</div><div class="agenda-month">Abr</div></div>
           <div><div class="agenda-city">Piracicaba, SP</div><div class="agenda-church">IASD Jardim São Paulo</div></div>
-          <div class="agenda-time">9h</div>
+          <div class="agenda-right"><div class="agenda-time">9h</div><div class="agenda-maps">📍 Ver no Maps</div></div>
         </a>
 
-        <a href="#" class="agenda-item">
+        <a href="https://www.google.com/maps/place/Igreja+Adventista+do+S%C3%A9timo+Dia/@-22.5705223,-47.4002908,17z/data=!3m1!4b1!4m6!3m5!1s0x3fdfed5c1f7ca43:0x2460c1eaad6ac3cb!8m2!3d-22.5705223!4d-47.4002908!16s%2Fg%2F11b77443fl?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="agenda-item">
           <div><div class="agenda-day">09</div><div class="agenda-month">Mai</div></div>
           <div><div class="agenda-city">Limeira, SP</div><div class="agenda-church">IASD Central de Limeira</div></div>
-          <div class="agenda-time">9h · 17h</div>
+          <div class="agenda-right"><div class="agenda-time">9h · 17h</div><div class="agenda-maps">📍 Ver no Maps</div></div>
         </a>
 
-        <a href="#" class="agenda-item">
+        <a href="https://www.google.com/maps/place/IASD+Vila+Cristina/@-22.7433954,-47.6654297,19z/data=!4m6!3m5!1s0x94c6310a75a9404d:0x320afe9c32b2193e!8m2!3d-22.7435439!4d-47.6651958!16s%2Fg%2F11shn9xvcw?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="agenda-item">
           <div><div class="agenda-day">23</div><div class="agenda-month">Mai</div></div>
           <div><div class="agenda-city">Piracicaba, SP</div><div class="agenda-church">IASD Vila Cristina</div></div>
-          <div class="agenda-time">9h</div>
+          <div class="agenda-right"><div class="agenda-time">9h</div><div class="agenda-maps">📍 Ver no Maps</div></div>
         </a>
 
-        <a href="#" class="agenda-item">
+        <a href="https://www.google.com/maps/place/Espa%C3%A7o+Novo+Tempo+de+Piracicaba/data=!4m2!3m1!1s0x0:0x19eab504d0ad64cc?sa=X&ved=1t:2428&ictx=111" target="_blank" class="agenda-item">
           <div><div class="agenda-day">14</div><div class="agenda-month">Jun</div></div>
           <div><div class="agenda-city">Piracicaba, SP</div><div class="agenda-church">Espaço Novo Tempo Piracicaba</div></div>
-          <div class="agenda-time">9h</div>
+          <div class="agenda-right"><div class="agenda-time">9h</div><div class="agenda-maps">📍 Ver no Maps</div></div>
         </a>
 
-        <a href="#" class="agenda-item">
+        <a href="https://www.google.com/maps/place/Igreja+Adventista+do+S%C3%A9timo+Dia+S%C3%A3o+Francisco%2Fpiracicaba/data=!4m2!3m1!1s0x0:0x2f9546de3cf513b6?sa=X&ved=1t:2428&ictx=111" target="_blank" class="agenda-item">
           <div><div class="agenda-day">20</div><div class="agenda-month">Jun</div></div>
           <div><div class="agenda-city">Piracicaba, SP</div><div class="agenda-church">IASD São Francisco</div></div>
-          <div class="agenda-time">19h</div>
+          <div class="agenda-right"><div class="agenda-time">19h</div><div class="agenda-maps">📍 Ver no Maps</div></div>
         </a>
 
       </div>
@@ -556,6 +566,17 @@ footer{background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);padding:
     </div>
   </div>
 </section>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20convidar%20o%20Grupo%20Identidade%20Vocal%20para%20uma%20apresentação." target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<style>
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:900;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .3s,box-shadow .3s;color:#fff}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5)}
+.whatsapp-float svg{width:28px;height:28px}
+</style>
 
 <!-- FOOTER -->
 <footer>
